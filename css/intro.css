@@ -1,0 +1,190 @@
+.header_bottom{
+          background-color: #fff;
+}
+
+main {
+          width: 100%;
+          position: relative;
+          text-align: center;
+          overflow: hidden;
+}
+
+.sec0 {
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          margin-top: 80px;
+          padding: 0px 45px;
+          box-sizing: border-box;
+
+}
+
+.overview_title {
+          width: 100%;
+          height: 300px;
+          border-radius: 30px;
+          margin: auto;
+          background-position: center;
+          background-size: cover;
+          background-image: url(../img/sv01.jpg);
+          background-repeat: no-repeat;
+          width: 100%;
+}
+
+.overview_title > h1 {
+          padding: 150px 0 0 60px;
+          text-align: left;
+          color: #fff;
+          font-size: 50px;
+          font-weight: 400;
+}
+
+.overview_title > p {
+          padding: 10px 0 0 60px;
+          text-align: left;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 400;
+}
+
+.sec1 {
+          width: 100%;
+          height: 1000px;
+          text-align: center;
+          margin: auto;
+          margin: 80px 45px;
+          
+}
+.ceo{
+          width: 100%;
+          position: absolute;
+          z-index: -50;
+          right: 45px;
+          
+}
+.ceo>img{
+          width: 764px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right;
+          float: right;
+}
+.sec1 > article {
+          width: 758px;
+          padding-left:150px;
+          box-sizing: border-box;
+}
+
+.title {
+          text-align: left;
+          font-weight: bold;
+          font-size: 16px;
+          color: #333;
+}
+
+.title::before {
+          content: '';
+          display: inline-block;
+          width: 50px;
+          height: 1px;
+          background-color: #333;
+          margin-right: 30px;
+          margin-bottom: 4px;
+}
+
+.sec1 > article > strong {
+          font-weight: bold;
+          font-size: 54px;
+          color: #ffa4c0;
+          text-align: left;
+          display: block;
+          margin-top: 50px;
+}.sec1>article>h3{
+          text-align: left;
+          color: #999;
+          font-size: 17px;
+          margin: 40px 0 80px 0;
+          font-weight: 300;
+}
+.sec1>article>p{
+          text-align: left;
+          color: #333;
+          font-size: 14px;
+          margin-top: 25px;
+          font-weight: 300;
+}
+.sec1 em{
+          color: #0076ff;
+}
+.signbox{
+          margin-top: 100px;
+          text-align: left;
+}
+.sec1>article>.signbox>h4{
+          color: #c6e1f2;
+          font-size: 15px;
+          font-weight: bold;
+          text-align: left;
+          margin-bottom: 20px;
+}
+
+
+/***********************1919이하**************************/
+@media only screen and (max-width: 1919px) {
+          
+          .sec1 > article {
+          padding-left: 6%;
+}
+}
+/***********************1590이하**************************/
+@media only screen and (max-width: 1590px) {
+          
+          .sec1 > article {
+          padding-left: 0;
+                    width: 45%;
+}
+          .ceo>img{
+          width: 45%;
+}
+}
+/***********************900이하**************************/
+@media only screen and (max-width: 900px) {
+          .sec1 > article {
+                    width: 100%;
+                    padding-right: 45px;
+}
+          .ceo{
+                    position: relative;
+                    display: block;
+          }
+}
+/***********************780이하**************************/
+@media only screen and (max-width: 780px) {
+          .sec0 {
+          padding: 0px 20px;
+                    height: 180px;
+
+}
+       .overview_title {
+          height: 180px;
+                 background-position:  right;
+}   
+          .overview_title > h1 {
+          padding: 80px 0 0 20px;
+          font-size: 24px;
+}
+
+.overview_title > p {
+          padding: 5px 0 0 20px;
+          text-align: left;
+          font-size: 14px;
+}
+          .sec1{
+                    min-height: 1000px;
+          }
+}
+/***********************1590이하**************************/
+@media only screen and (max-width: 1590px) {
+          
+          
+}

@@ -1,103 +1,297 @@
 header {
-          width: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 99999999;
 }
 
 .header_top {
-          width: 100%;
-          height: 36px;
-          background-color: #eee;
-          margin: auto;
+    width: 100%;
+    height: 36px;
+    background-color: #eee;
+    margin: auto;
 }
 
 .header_top_wrap {
-          width: 1800px;
-          height: 36px;
-          overflow: hidden;
-          margin: auto;
+    width: 93.75%;
+    height: 36px;
+    overflow: hidden;
+    margin: auto;
 
 }
 
 .header_top_wrap > ul {
-          float: right;
-          justify-content: flex-end;
-          display: flex;
+    float: right;
+    justify-content: flex-end;
+    display: flex;
 }
 
 .header_top_wrap > ul > li {
-          margin: 0 5px;
-          line-height: 36px;
-          color: #949494;
-          font-size: 13px;
+    margin: 0 5px;
+    line-height: 36px;
+    color: #949494;
+    font-size: 13px;
 
 }
 
 .header_top_wrap > ul > li > a {
-          color: #949494;
+    color: #949494;
 }
 
 .icon_count {
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #999;
-          color: #fff;
-          text-align: center;
-          line-height: 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
 }
-.header_bottom{
-          width: 100%;
-          margin: auto;
+
+.header_bottom {
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    z-index: 9999;
 }
+
 .header_bottom_wrap {
-          margin-left: 60px;
-          width: 1800px;
-          height: 70px;
-          display: flex;
-          position: fixed;
-          z-index: 9999;
-          align-items: center;
-          justify-content: space-between;
-          
+    margin: 0 60px;
+    width:  93.75%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+
 
 }
-.header_bottoom_wrap{
-          display: flex;
+.nav {
+    display: flex;
 }
-.nav{
-          display: flex;
-}
-.nav>li{
-          margin: 20px;
-}
-.mall_li{
-          display: flex;
-          width: 182px;
-          
+
+.nav > li {
+    margin: 20px;
+    position: relative;
 
 }
 
-.mall_li>li{
-          width: 50%;
+.nav > li > a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0 20px;
+    display: block;
+}
+
+.nav > li:hover .depth2 {
+    display: block;
+}
+
+.depth2 {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%);
+    min-width: 170px;
+    background-color: #ee7399;
+    padding: 20px;
+}
+
+.depth2 > a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mall_li {
+    display: flex;
+    width: 182px;
+
+
+}
+
+.mall_li > li {
+    width: 50%;
 }
 
 
-.mall_li>li>a{
-          width: 100%;
-          line-height: 34px;
-          text-align: center;
-          display: block;
-          background-color: rgba(255,255,255,0.5);
-          border: 1px solid #ee7399;
-          font-size: 14px;
-          letter-spacing: -0.42px;
-          color: #ee7399;
+.mall_li > li > a {
+    width: 100%;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ee7399;
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    color: #ee7399;
 }
-.mall_li>li:first-child>a{
-          border-top-left-radius: 50px;
-          border-bottom-left-radius: 50px;
-                    }
-.mall_li>li:last-child>a{
-          border-top-right-radius: 50px;
-          border-bottom-right-radius: 50px;
-                    }
+
+.mall_li > li:first-child > a {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.mall_li > li:last-child > a {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.kakao_top{
+    float: right;
+}
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.f_l {
+    float: left;
+    align-items: center;
+    display: flex;
+}
+
+.f_r {
+    float: right;
+    align-items: center;
+    padding-left: 100px;
+    display: flex;
+}
+
+.f_r p {
+    color: #999;
+    font-size: 11px;
+    display: block;
+    padding-left: 10px;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer h1 {
+    padding-right: 50px;
+}
+
+address > p {
+    font-size: 13px;
+    font-weight: 300;
+    color: #646464;
+    line-height: 1.85;
+}
+
+address > p > a {
+    font-size: 13px;
+    font-weight: bold;
+    color: #646464;
+    line-height: 1.85;
+}
+
+.f_menu li {
+    font-size: 13px;
+    color: #646464;
+    font-weight: 500;
+}
+
+.f_menu li > a {
+    padding: 0 14px;
+    color: #646464;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+.f_r > ul > li > a > img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+
+
+
+.kcp {
+    width: 50px
+}
+
+
+
+@media only screen and (max-width: 1251px) {
+    .nav {
+        visibility: hidden;
+
+    }
+    .nav_btn{
+        margin-left: 20px;
+    }
+    .nav_btn>span{
+        display: block;
+        width: 25px;height: 3px;
+        margin: 7px;
+        background-color: #444;
+    }
+
+    .header_bottom > .logo {}
+
+    .mall_li {}
+
+    .kakao_top {
+        padding: 0 20px;
+    }
+    
+    .f_r{
+        display: block;
+        
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 1024px) {
+    header{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 780px){
+footer {
+    display: block;
+    text-align: center;
+
+}
+    .f_l {
+    float: left;
+    align-items: center;
+    display: block;
+}
+
+.f_r {
+    margin: auto;
+    float: left;
+    align-items: center;
+    padding-left: 0;
+    display: block;
+}
+    .f_r>ul{
+        display: flex;
+    }
+    .f_r>ul>li{
+        display: inline-block;
+    }
+    .kcp{
+        margin: auto;
+    }
+    }
