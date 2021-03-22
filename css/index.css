@@ -2,39 +2,30 @@ main {
     width: 100%;
     position: relative;
     overflow: hidden;
+    top: -70px;
 }
 
 .sec1 {
     width: 100%;
     height: 1000px;
     overflow: hidden;
-
-}
-
-.sec1_bg {
-    width: 100%;
-    height: 1000px;
     background-image: url(../img/mv1.png);
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    overflow: hidden;
-
-
+    opacity: 0;
 }
 
 .slogun {
-    width: 78.125%;
+    width: 1500px;
     margin: auto;
     color: #ffa4c0;
     text-align: left;
     padding-top: 300px;
     position: relative;
-    left: -200px;
-    transform: translateX(200px);
-    transition: transform 1s;
-    transition-timing-function: ease-in-out;
+    left: -100px;
+    opacity: 0;
 
 }
 
@@ -47,7 +38,7 @@ main {
 
 }
 
-.slogun > p {
+.slogun > .txt1 {
     margin-top: 20px;
     font-size: 14px;
     font-weight: 400;
@@ -69,10 +60,10 @@ main {
     position: relative;
     top: 25%;
     left: 50%;
-    transform: translate(-50%)
+    transform: translate(-50%);
 }
 
-.txt {
+.txt2 {
     float: left;
     font-size: 14px;
     font-weight: 400;
@@ -80,6 +71,9 @@ main {
     color: #ffa4c0;
     margin-left: 20px;
 }
+
+
+
 
 .sec2 {
     width: 1500px;
@@ -91,19 +85,21 @@ main {
 
 .bg_circle {
     position: absolute;
-    top: -200px;
-    left: -450px;
+    top: -150px;
+    left: -200px;
     z-index: -999;
-    transform: translateX(200px);
-    transition: transform 1s;
-    transition-delay: 2.5s;
-    transition-timing-function: ease-in-out;
+    opacity: 0;
 }
 
+.bg_circle > img {
+    width: 230px;
+    height: 230px;
+}
 
 .sec2 > article {
     display: flex;
     margin-top: 200px;
+    position: relative;
 }
 
 .sec2 > article > strong {
@@ -112,6 +108,9 @@ main {
     font-weight: bold;
     color: #4d4d4d;
     flex: 1;
+    position: relative;
+    left: -80px;
+    opacity: 0;
 
 }
 
@@ -121,23 +120,29 @@ main {
     margin-top: 50px;
     margin-left: 100px;
     flex: 1;
-
+    position: relative;
+    right: -100px;
+    opacity: 0;
 }
 
-.box_wrap {}
+.box_wrap {
+    position: relative;
+}
 
 .box {
     width: 1500px;
     height: 500px;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    position: relative;
 }
 
 .box > li {
     width: 22%;
     height: 286px;
-
+    position: relative;
+    bottom: -80px;
+    opacity: 0;
 }
 
 .box > li > a {
@@ -239,18 +244,19 @@ main {
 
 .bg_gra {
     background-image: linear-gradient(28deg, #cec0eb 12%, #f7c2c8 87%, #000 87%);
-    width: 662px;
-    height: 662px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: absolute;
-    right: -150px;
+    right: -30px;
     position: absolute;
     z-index: -9999;
+    opacity: 0;
 }
 
 .bg_gra h3 {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 60px;
+    font-size: 10px;
     text-align: left;
     margin-top: 300px;
     margin-left: 50px;
@@ -263,6 +269,7 @@ main {
     font-size: 60px;
     font-weight: bold;
     margin: 70px 0;
+    opacity: 0;
 }
 
 .health_list {
@@ -270,12 +277,15 @@ main {
     height: 238px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .health_list > li {
     width: 30%;
     height: 100%;
-
+    position: relative;
+    opacity: 0;
+    bottom: -80px;
 }
 
 .health_list > li > a {
@@ -298,7 +308,15 @@ main {
 .sec4 {
     width: 100%;
     margin: auto;
-    overflow: hidden;
+    margin-bottom: 200px;
+    position: relative;
+
+}
+
+.sec4 > article {
+    width: 1500px;
+    margin: auto;
+    position: relative;
 }
 
 .sec4 h2 {
@@ -308,13 +326,26 @@ main {
     font-weight: bold;
     margin: 70px 0;
     display: inline;
+    opacity: 0;
+}
+
+.sec4 span {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+
+    opacity: 0;
+
 }
 
 .sec4 > article > span > a > img {
     width: 30px;
     height: 30px;
-    display: inline;
-    margin-left: 10px;
+    vertical-align: middle;
 }
 
 
@@ -328,6 +359,12 @@ main {
 
 .sec4 > article > ul {
     text-align: left;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    left: -80px;
+    opacity: 0;
 }
 
 .sec4 > article > ul > li {
@@ -346,39 +383,43 @@ main {
 
 }
 
+
 .sec4 p {
     font-size: 13px;
     color: #999;
     margin-top: 10px;
 }
-}
 
 .main_bot {
-    width: 40%;
-    padding-left: 5%;
+    width: 100%;
     position: absolute;
     right: 0;
-    float: right;
+    top: 0;
 }
 
-.main_bot > img {
-    vertical-align: bottom;
-    width: 40%;
-
+.main_bot > .bg {
+    position: absolute;
+    right: -1500px;
+    top: -1100px;
+    z-index: -9999999;
+    opacity: 0;
 }
 
-
-
-
-
+.main_bot > .img {
+    position: absolute;
+    right: -100px;
+    top: 200px;
+    width: 60%;
+    opacity: 0;
+}
 
 .sec5 > article {
     width: 1500px;
-
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
     margin: auto;
+    position: relative;
 }
 
 .sec5 > article > div {
@@ -386,6 +427,7 @@ main {
     height: 286px;
     padding: 40px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .sec5 > article > div:nth-child(1) {
@@ -402,15 +444,14 @@ main {
 
 .sec5 > article > div > a {
     position: relative;
-    overflow: hidden;
+    display: block;
 }
 
 .sec5 > article > div > a > h3 {
     font-size: 25px;
     font-weight: normal;
     color: #fff;
-    ;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-family: 'Jua';
 }
 
@@ -422,8 +463,8 @@ main {
 
 .mb_img {
     position: absolute;
-    right: -400px;
-    bottom: -220px;
+    right: 0px;
+    bottom: -40px;
 }
 
 .mb_arrow {
@@ -431,18 +472,11 @@ main {
     height: 21px;
     ;
     position: absolute;
-    top: 10px;
-    left: 320px;
+    top: 0;
+    right: 0;
 
 
 }
-
-
-
-
-
-
-
 
 
 
@@ -477,12 +511,14 @@ main {
 
 /***********************1500이하**************************/
 @media only screen and (max-width: 1500px) {
-    .sec1_bg {
-        width: 100%;
+    .sec1 {
         background-size: contain;
-        background-position: right top;
+        background-size: 130%;
 
+    }
 
+    .slogun {
+        width: 95%;
 
     }
 
@@ -527,12 +563,32 @@ main {
 
     }
 
+    .sec5 > article {
+        width: 90%;
+    }
+.sec5 > article > div {
+    width: 32%;
+    height: 200px;
+}
+    .sec5 > article > div > a > h3 {
+        margin-bottom: 10px;
+    }
+
+    .sec5 > article > div > a > p {
+        width: 80%;
+        font-size: 15px;
+    }
+    .mb_img {
+    display: none;
+        
+}
 }
 
 
 /***********************1251이하**************************/
 @media only screen and (max-width: 1251px) {
 
+    /*
     .slogun {
         width: 100%;
         margin: auto;
@@ -541,6 +597,12 @@ main {
         position: relative;
         left: -200px;
         transform: translateX(250px);
+
+    }
+*/
+    .slogun {
+
+        padding-top: 200px;
 
     }
 
@@ -563,7 +625,7 @@ main {
     .sec2 > article > p {
         flex: 1;
         margin-left: 0;
-
+        margin-bottom: 20px;
     }
 
     .box {
@@ -607,12 +669,31 @@ main {
 
 /**********************780이하**************************/
 @media only screen and (max-width: 780px) {
+    .sec1 {
+        background-size: 200%;
+
+    }
+
     .slogun > strong {
-        font-size: 50px;
+        font-size: 32px;
 
 
     }
 
+    .circle {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .circle > a > img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .txt2 {
+        line-height: 30px;
+    }
 
     .bg_gra {
         width: 310px;
@@ -634,12 +715,12 @@ main {
     .health_list {
         width: 90%;
         height: 500px;
-        display: block;
+        flex-direction: column;
     }
 
     .health_list > li {
         width: 100%;
-
+        margin-bottom: 50px;
     }
 
 

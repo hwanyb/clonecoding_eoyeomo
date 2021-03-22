@@ -53,37 +53,48 @@ header {
     margin: auto;
     position: sticky;
     z-index: 9999;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .header_bottom_wrap {
-    margin: 0 60px;
+    margin: auto;
     width: 93.75%;
     height: 70px;
     display: flex;
-    position: fixed;
     z-index: 9999;
     align-items: center;
     justify-content: space-between;
+}
 
+.logo {
+    width: 160px;
+}
 
+.logo > a {
+    width: 100%;
+    display: block;
 }
 
 .nav {
     display: flex;
+    justify-content: space-between;
 }
 
 .nav > li {
     margin: 20px;
     position: relative;
-
+    white-space: nowrap;
 }
 
 .nav > li > a {
     color: #333;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0 20px;
     display: block;
+    height: 70px;
+    line-height: 70px;
 }
 
 .nav > li:hover .depth2 {
@@ -94,17 +105,19 @@ header {
     display: none;
     position: absolute;
     left: 50%;
-    top: 40px;
+    top: 70px;
     transform: translate(-50%);
-    min-width: 170px;
+    min-width: 100%;
     background-color: #ee7399;
     padding: 20px;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.depth2 > a {
+.depth2 >li> a {
     color: #fff;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     line-height: 30px;
 }
@@ -143,10 +156,29 @@ header {
     border-bottom-right-radius: 50px;
 }
 
+.nav_btn {
+    margin-left: 20px;
+    display: none;
+}
+
+.nav_btn > span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 7px;
+    background-color: #444;
+}
+
 .kakao_top {
+    line-height: 70px;
     float: right;
 }
 
+.kakao_top > a > img {
+    vertical-align: middle;
+}
+
+/*-----------------------------------------------------------------*/
 footer {
     width: 100%;
     background-color: #f7f7f7;
@@ -154,21 +186,23 @@ footer {
     overflow: hidden;
     box-sizing: border-box;
     display: flex;
+    align-content: center;
     justify-content: space-between;
+    position: relative;
 
 }
 
 .f_l {
-    align-items: center;
+    width: 100%;
     display: flex;
+
 }
 
 .f_r {
-    float: right;
-    align-items: center;
-    padding-left: 100px;
+    width: 100%;
+    /*    align-items: center;*/
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
 .f_r p {
@@ -179,6 +213,18 @@ footer {
 
 footer ul {
     display: flex;
+}
+
+.f_r > ul {
+    margin-right: 30px;
+}
+
+.f_r > ul > li {
+    margin-left: 15px;
+}
+
+footer ul > li > a > img {
+    width: 35px;
 }
 
 footer h1 {
@@ -199,19 +245,6 @@ address > p > a {
     line-height: 1.85;
 }
 
-.f_menu li {
-    font-size: 13px;
-    color: #646464;
-}
-
-.f_menu li > a {
-    padding: 0 14px;
-    color: #646464;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.f_menu li > a:first-child{
-    padding-left: 0;}
 
 .sns > ul > li > a > img {
     width: 30px;
@@ -220,45 +253,67 @@ address > p > a {
 
 
 .f_menu {
-    display: flex;
     align-items: center;
-    
+    margin-right: 20px;
+
+}
+
+.f_menu li {
+    font-size: 13px;
+    color: #646464;
+}
+
+.f_menu > ul > li > a {
+    margin: 0 10px;
+    color: #646464;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.f_menu > p {
+    margin-left: 10px;
 }
 
 .f_menu > .txt {
     flex-direction: column;
     align-items: center;
-    
     padding-right: 20px;
 }
 
 .kcp {
-    width: 60px
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: inline;
 }
-.sns{
+
+.kcp > a {
+    height: 60px;
+    display: block;
+    line-height: 60px;
+}
+
+.kcp img {
+    width: 60px;
+    vertical-align: middle;
+
+}
+
+.sns {
     display: flex;
     align-items: center;
     padding-right: 20px;
 }
 
 
-@media only screen and (max-width: 1251px) {
+@media only screen and (max-width: 1270px) {
     .nav {
         visibility: hidden;
+        width: 40%;
 
     }
 
-    .nav_btn {
-        margin-left: 20px;
-    }
 
-    .nav_btn > span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 7px;
-        background-color: #444;
-    }
 
     .header_bottom > .logo {}
 
@@ -268,70 +323,145 @@ address > p > a {
         padding: 0 20px;
     }
 
+
     .f_r {
         flex-direction: column;
+        /*
         padding-left: 20px;
         align-items: center;
-        
+*/
+
     }
 
-    .sns {
+    .f_r > ul {
         float: left;
+    }
+
+    .nav_btn {
         display: block;
-        
+
     }
 
 
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1035px) {
     header {
         display: none;
     }
-    footer{
+
+    footer {
         flex-direction: column;
-        
+
     }
-    .f_r{
+
+    .f_l {
+        flex-direction: column;
+    }
+
+    .f_l > h1 {
+        text-align: left;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    .f_l > address {
+        margin-left: 10px;
+    }
+
+    .f_r {
         margin-top: 20px;
     }
-    .sns{
+
+    .sns {
         float: left;
         text-align: left;
+    }
+
+    .kcp {
+        float: right;
+        position: relative;
+        bottom: 50px;
+        ;
+        right: -91%;
     }
 
 }
 
 
 @media only screen and (max-width: 780px) {
-    footer {
-        display: block;
-        text-align: center;
+    .logo {
+        width: 100px;
+    }
+
+    .logo > a {
+        width: 100px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .nav {
+        width: 20%;
 
     }
 
-    .f_l {
-        float: left;
-        align-items: center;
-        display: block;
+    .nav > li {
+        margin: 0;
+
+    }
+
+    .mall_li {
+        display: none;
+    }
+
+    .f_l > h1 {
+        text-align: center;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .f_l > address {
+        margin-left: 0px;
+        text-align: center;
     }
 
     .f_r {
-        margin: auto;
-        float: left;
         align-items: center;
-        padding-left: 0;
+
     }
 
-    .f_r > ul {
-        display: flex;
-    }
+    .f_r > .f_menu {
+        text-align: center;
+        margin: 20px 0;
 
-    .f_r > ul > li {
-        display: inline-block;
     }
 
     .kcp {
+        bottom: 0;
+        right: 0;
         margin: auto;
+
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    .nav {
+        width: 5%;
+    }
+
+    address>p{
+        font-size: 11px;
+    }
+
+    address>p>a{
+        font-size: 11px;
+    }
+    .f_menu>ul>li>a{
+        font-size: 11px;
+    }
+    .f_menu>p>a{
+        font-size: 11px;
     }
 }
